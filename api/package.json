@@ -1,0 +1,36 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Cloudflare worker TypeScript template",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "NODE_ENV=development npm run build",
+    "format": "prettier --write '**/*.{ts,js,css,json,md}'",
+    "test:clean": "rimraf ./transpiled/src ./transpiled/test",
+    "test": "npm run test:clean && npm run transpile && mocha --require source-map-support/register --recursive transpiled/test",
+    "transpile": "tsc --project ./test",
+    "publish:dev": "wrangler publish",
+    "publish:prod": "wrangler publish -e production"
+  },
+  "author": "author",
+  "license": "MIT OR Apache-2.0",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^2.0.0",
+    "@types/uuid": "^8.3.0",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.9.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "@cloudflare/kv-asset-handler": "^0.0.12",
+    "aws4fetch": "^1.0.13",
+    "encrypt-workers-kv": "^0.0.3",
+    "qs": "^6.9.4",
+    "stripe": "^8.114.0",
+    "uuid": "^8.3.1"
+  }
+}

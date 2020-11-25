@@ -1,0 +1,9 @@
+node_modules
+
+# Once you've forked this project, you should comment out the below lines
+# to allow your relevant configuration details to be allowed in the source code.
+config.js
+api/wrangler.toml
+app/sanity.json
+app/static
+sanity/sanity.json

@@ -1,0 +1,22 @@
+name = "ecommerce-deals-template"
+type = "webpack"
+account_id = "$youraccountid"
+workers_dev = true
+webpack_config = "webpack.config.js"
+
+vars = {CORS_HEADERS = "*", CORS_ORIGIN = "*"}
+kv_namespaces = [
+  { binding = "ENCRYPTED", id = "UNIQUEKVID" }
+]
+
+[env.production]
+route = "https://yourwebsite.com/*"
+zone_id = "ZONEID"
+vars = {CORS_HEADERS = "*", CORS_ORIGIN = "*"}
+kv_namespaces = [
+  { binding = "ENCRYPTED", id = "UNIQUEKVID2" }
+]
+
+[site]
+bucket = "../app/dist"
+entry-point = "."

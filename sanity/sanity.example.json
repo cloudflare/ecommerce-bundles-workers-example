@@ -1,0 +1,47 @@
+{
+  "root": true,
+  "api": {
+    "projectId": "FILLINPROJECTID",
+    "dataset": "production"
+  },
+  "project": {
+    "name": "FILLINPROJECTNAME"
+  },
+  "__experimental_spaces": [
+    {
+      "name": "development",
+      "title": "Development",
+      "api": {
+        "projectId": "95my2r9d",
+        "dataset": "development"
+      }
+    },
+    {
+      "name": "production",
+      "title": "Production",
+      "default": true,
+      "api": {
+        "projectId": "95my2r9d",
+        "dataset": "production"
+      }
+    }
+  ],
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool"
+  ],
+  "env": {
+    "development": {
+      "plugins": ["@sanity/vision"]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    }
+  ]
+}

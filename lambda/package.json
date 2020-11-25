@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "google-spreadsheet": "^3.0.13"
+  },
+  "devDependencies": {
+    "serverless-dotenv-plugin": "^3.1.0"
+  }
+}

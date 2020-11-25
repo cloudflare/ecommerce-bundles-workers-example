@@ -1,0 +1,11 @@
+service: ecommerce-lambda-handler
+plugins:
+  - serverless-dotenv-plugin
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+functions:
+  add_to_sheet:
+    handler: handler.add_to_sheet

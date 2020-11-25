@@ -1,0 +1,33 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - main
+  repository_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: yarn workspace api build
+
+      # TODO: Configure publish step
+      # - run: yarn workspace api publish
+
+      - run: yarn workspace app build
+
+      # TODO: Add Workers Sites to app workspace
+      # - run: yarn workspace app publish
+
+      # - name: Publish
+      #   uses: cloudflare/wrangler-action@1.2.0
+      #   with:
+      #     apiToken: ${{ secrets.CF_API_TOKEN }}
+      #     workingDirectory: api
+      #   env:
+      #     CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}

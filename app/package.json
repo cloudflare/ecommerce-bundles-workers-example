@@ -1,0 +1,28 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt-ts",
+    "start": "nuxt-ts start",
+    "build:dev": "nuxt-ts generate",
+    "build": "nuxt-ts generate --dotenv .env.production"
+  },
+  "dependencies": {
+    "@nuxt/typescript-runtime": "^2.0.0",
+    "@nuxtjs/sanity": "^0.3.9",
+    "@sanity/client": "^2.0.1",
+    "@stripe/stripe-js": "^1.10.0",
+    "@yabhq/nuxt-fathom": "^2.0.0",
+    "core-js": "^3.6.5",
+    "nuxt": "^2.14.6",
+    "nuxt-social-meta": "^0.0.5",
+    "sanity-blocks-vue-component": "^0.1.0",
+    "vue-class-component": "^7.2.6"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.14.6",
+    "@nuxt/typescript-build": "^2.0.3",
+    "@nuxtjs/tailwindcss": "^3.1.0"
+  }
+}
