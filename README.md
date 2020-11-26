@@ -49,4 +49,4 @@ _This section is in progress - the list of secrets can be found below, and expla
 
 ## Example
 
-You can see an example deployment at [deals.bytesized.xyz](https://deals.bytesized.xyz).
+You can see an example deployment at [ecommerce-example.signalnerve.workers.dev](https://ecommerce-example.signalnerve.workers.dev/).
