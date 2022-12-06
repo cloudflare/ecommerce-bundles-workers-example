@@ -29,7 +29,7 @@
     "@cloudflare/kv-asset-handler": "^0.0.12",
     "aws4fetch": "^1.0.13",
     "encrypt-workers-kv": "^0.0.3",
-    "qs": "^6.9.4",
+    "qs": "^6.9.7",
     "stripe": "^8.114.0",
     "uuid": "^8.3.1"
   }
